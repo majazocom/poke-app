@@ -2,7 +2,7 @@
   <main>
     <article
       class="pokemonframe"
-      v-bind:style="{ backgroundColor: pokemon.color, color: '#fff' }"
+      v-bind:style="{ backgroundColor: pokemon.color }"
     >
       <article>
         <a href="#" v-on:click="close">&leftarrow;</a>
@@ -40,3 +40,9 @@ export default {
   }
 };
 </script>
+<style>
+.pokemonframe {
+    border: solid 5px white;
+    color: black
+}
+</style>
