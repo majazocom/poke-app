@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    
-  </div>
+  <main class="home">
+    <Pokemon v-for="(pokemon, index) in pokemons" v-bind:key="index" v-bind:pokemon="pokemon"/>
+  </main>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
   },
   computed: {
     pokemons() {
-      return 
+      return this.$store.state.pokemons;
     }
   }
 }

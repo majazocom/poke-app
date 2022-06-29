@@ -9,8 +9,11 @@ export default createStore({
         //en mutation för att få in våra pokemons i statet
         addPokemons(state, pokemons) {
             state.pokemons = pokemons;
-        }
+        },
         //en mutation för att få in vald pokemon i statet (selectedPokemon)
+        addSelected(state, pokemon) {
+            state.selectedPokemon = pokemon;
+        }
     },
     actions: {
         //fetcha från vår json och som kallar på vår "lägga till pokemons"-mutation
