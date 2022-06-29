@@ -6,6 +6,11 @@
 
 <script>
 //här vill vi få in våra pokemons från vår store
+export default {
+  created() {
+    this.$store.dispatch('getPokemons');
+  }
+}
 </script>
 
 <style>
