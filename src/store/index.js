@@ -1,14 +1,21 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-  },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+    state: {
+        pokemons: [],
+        selectedPokemon: {}
+    },
+    mutations: {
+        //en mutation för att få in våra pokemons i statet
+        addPokemons(state, pokemons) {
+            state.pokemons = pokemons;
+        }
+        //en mutation för att få in vald pokemon i statet
+    },
+    actions: {
+        //fetcha från vår json och som kallar på vår "lägga till pokemons"-mutation
+        async getPokemons(ctx) {
+            const response = await fetch('../../assets/pokemons.json');
+        }
+    }
 })
